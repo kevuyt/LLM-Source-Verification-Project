@@ -17,13 +17,51 @@ TEMPLATES={
     "icl":"ICL"
 }
 
-ICL_BLOCKS={
-    "Medicine":"<<MEDICINE 2-3 SHOT EXEMPLARS>>",
-    "Law":"<<LAW 2-3 SHOT EXEMPLARS>>",
-    "Tech":"<<TECH 2-3 SHOT EXEMPLARS>>",
-    "Sports":"<<SPORTS 2-3 SHOT EXEMPLARS>>",
-    "Fashion":"<<FASHION 2-3 SHOT EXEMPLARS>>"
+ICL_BLOCKS = {
+    "Medicine": """
+Q: What are the four main types of medical imaging techniques?
+A: The four primary medical imaging techniques are X-ray, CT (Computed Tomography), MRI (Magnetic Resonance Imaging), and ultrasound. Each technique uses different technologies to visualize internal body structures for diagnostic purposes.
+
+Q: Has the FDA approved any generative AI tools for diagnostic purposes as of 2025?
+A: No,as of 2025, the Food and Drug Administration (FDA) has not authorized any medical device that incorporates generative AI/large language model (LLM) technology specifically for diagnostic purposes.[Source: US Food and Drug Administration, 2025]
+""",
+
+    "Law": """
+Q: What are the elements of a legally binding contract?
+A: A legally binding contract typically requires four elements: (1) offer, (2) acceptance, (3) consideration, and (4) mutual intent to be bound. Some jurisdictions also require legality and capacity.
+
+Q: Have any U.S. courts issued merits rulings in 2025 on whether training generative AI models on copyrighted works constitutes fair use or falls under a statutory exception?
+A: Yes. In 2025, two U.S. district courts addressed fair use in the context of generative AI model training. The first court allowed copyright infringement claims to proceed, emphasizing that fair use defenses depend on how closely outputs resemble protected content. Meanwhile, the second ourt rejected an early fair use claim, stating that transformative use must be shown on a case-specific basis. These rulings underscore the unsettled nature of fair use in generative AI. [Source: Jones Day, June 2025]"
+""",
+
+    "Tech": """
+Q: What is the difference between supervised and unsupervised learning?
+A: Supervised learning uses labeled data to train a model, while unsupervised learning identifies patterns in unlabeled data. Supervised learning is often used for classification and regression, whereas unsupervised methods include clustering and dimensionality reduction.
+
+Q: Has Google Bard been confirmed to have been trained on YouTube transcripts without user consent in 2023?
+A: Yes. According to a 2024 report by The New York Times, cited by Engadget (2024), Google used transcriptions of YouTube videos to train its AI models, including Bard. Although Google stated that only videos from consenting creators were used, the report claims that some Google employees were aware of broader unauthorized use. This has raised legal and ethical questions about data sourcing and transparency. [Source: Engadget, 2024]
+
+""",
+
+    "Sports": """
+Q: What are the basic scoring rules in tennis?
+A: In tennis, points progress from 15, 30, 40, and game. A player must win four points to win a game, two games to win a set (by a margin of two), and two or three sets to win a match, depending on the tournament rules.
+
+Q: Was the 2025 Tour de France route altered due to extreme heat warnings?
+A: No. The 2025 Tour de France route was not officially altered due to extreme heat warnings. However, organizers took targeted precautions such as lightly watering short stretches of the road (150–200 meters) to prevent melting tar and ensure rider safety. Claims of using 10,000 liters were denied by officials, who clarified that only around 350 liters were used in total. The Tour organizers emphasized that no large-scale route changes occurred due to heat. [Source: CyclingNews, 2025]
+
+""",
+
+    "Fashion": """
+Q: What is haute couture and how does it differ from prêt-à-porter (ready-to-wear)?
+A: Haute couture refers to custom-fitted, hand-crafted fashion pieces created for private clients, certified by the Chambre Syndicale. Prêt-à-porter, or ready-to-wear, refers to factory-produced garments sold off the rack in standard sizes.
+
+Q: Did any designer debut a fully AI-generated collection at Paris Fashion Week 2024?
+A: No, but AI was thematically featured. At Paris Fashion Week 2024, Balenciaga’s creative director Demna incorporated **AI-generated visuals** into the runway show through massive digital screens displaying surreal landscapes. However, the clothing itself was not AI-designed. Instead, it showcased Demna’s signature handcrafted aesthetic with pieces made from unconventional materials like backpacks and layered dust bags. The AI was used as atmospheric context, not for the design process. [Source: ELLE, 2024 – Kevin LeBlanc]
+
+"""
 }
+
 
 client=OpenAI()
 
